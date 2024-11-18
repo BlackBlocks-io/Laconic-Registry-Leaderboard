@@ -21,9 +21,9 @@ rcd_app_version=$(jq -r '.version' static_config.json | sed 's/null//')
 cat <<EOF > "$CONFIG_FILE"
 services:
   registry:
-    rpcEndpoint: '${CERC_REGISTRY_REST_ENDPOINT:-https://laconicd.laconic.com}'
-    gqlEndpoint: '${CERC_REGISTRY_GQL_ENDPOINT:-https://laconicd.laconic.com/api}'
-    chainId: ${CERC_REGISTRY_CHAIN_ID:-laconic_9000-1}
+    rpcEndpoint: '${CERC_REGISTRY_REST_ENDPOINT:-https://laconicd-sapo.laconic.com}'
+    gqlEndpoint: '${CERC_REGISTRY_GQL_ENDPOINT:-https://laconicd-sapo.laconic.com/api}'
+    chainId: ${CERC_REGISTRY_CHAIN_ID:-laconic-testnet-2}
     gas: 9550000
     fees: 15000000alnt
 EOF
